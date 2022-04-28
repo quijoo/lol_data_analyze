@@ -1,0 +1,46 @@
+password: com.cqu.group8
+mailList = [
+    'arrcy4728@yinsiduanxin.com',
+    'kbqqi3258@yinsiduanxin.com',
+    'btqyw3421@yinsiduanxin.com',
+    'nhrzv4335@yinsiduanxin.com',
+    'xphir6537@yinsiduanxin.com',
+    'sseyy9534@yinsiduanxin.com',
+    'yxbyd6636@yinsiduanxin.com',
+    'jeobr2911@yinsiduanxin.com',
+    'wrbnx3121@yinsiduanxin.com',
+    'lvbgu4588@yinsiduanxin.com',
+    'yjduu5835@yinsiduanxin.com',
+    'yszuz7656@yinsiduanxin.com',
+    'luygj2524@yinsiduanxin.com',
+    'wgdbc8183@yinsiduanxin.com',
+    'gogpv2466@yinsiduanxin.com',
+    cqu01  cqujsjkxyjs02
+    cqu02  cqujsjkxyjs02
+    cqu03  cqujsjkxyjs02
+    cqu04  cqujsjkxyjs02
+    cqu05  cqujsjkxyjs02
+
+
+    
+]
+
+tokenList = [
+    "RGAPI-3e84561a-88f2-4f23-81ef-b4ca8061b9d0",
+    "RGAPI-13d97586-1dde-46e1-8d71-00eacd01ef99",
+    "RGAPI-6836bfaa-ea16-48a4-8f78-fc6b0ad9d2b1",
+    "RGAPI-461ef4a6-5586-45c6-a5b1-25a17378960b",
+    "RGAPI-a0b8245e-fc6d-4181-a2f8-b25eddbeca11",
+    "RGAPI-d0074b22-5eb0-40c1-8789-f35218938aae",
+    "RGAPI-746cbd87-1f1a-4bfc-85a0-6d2c35bba017",
+    "RGAPI-24136e4f-8208-46c3-bbd8-4be9c6e8059e",
+    "RGAPI-24136e4f-8208-46c3-bbd8-4be9c6e8059e",
+    "RGAPI-d0c9efa4-bb41-4a17-b87b-a8bd91adde54",
+    "RGAPI-862e68ad-b3a2-489b-9342-763c1ed12b87",
+    "RGAPI-0d8eb8c3-81bb-4bf0-af00-b2f8873a9e4e",
+    "RGAPI-7264f074-ed06-41df-aec2-01b6b41dfbd1",
+    "RGAPI-3317398d-79f3-4f9b-a79a-406785525dfb",
+    "RGAPI-b7bd83c0-fe16-43fd-b38d-33e4c3b1cd56",
+    "",
+    "",
+    "",]

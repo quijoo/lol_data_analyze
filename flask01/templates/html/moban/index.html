@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../../../static/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../../../static/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../../../static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../../../static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../../../static/img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+
+
+
+      <style>
+
+          .box_tu01{
+              width: 540px;
+              height: 600px;
+              background-color: #0c5460;
+          }
+
+          .box_tu02{
+              width: 1110px;
+              height: 559px;
+              background-color: #2D3035;
+          }
+
+          .box_tu03{
+              width: 850px;
+              height: 310px;
+              background-color: #2D3035;
+          }
+
+
+
+
+ .test-input{
+       width:200px;display:contents;
+    }
+    .test-label{
+    position:relative;
+        font-size: 0;
+        }
+    .test-radio{
+        display:none;
+    }
+    .silde-lr-btn{background-color: #133113;
+        width: 65px;    display: inline-block;
+        height: 30px;
+       text-align: center;
+    }
+    .test-radio:checked+ .silde-lr-btn:after{background-color: #7abaff;
+        content: "";
+        color: #fff;
+        width: 65px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+    .silde-text{position: absolute; font-size: 25px;   z-index: 1;
+        left: 13px;}
+    .test-radio:checked~ .silde-text{
+        color: #0e1a0c;
+    }
+
+
+      </style>
+
+
+
+  </head>
+  <body>
+
+
+
+
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="search-panel">
+          <div class="search-inner d-flex align-items-center justify-content-center">
+            <div class="close-btn">Close <i class="fa fa-close"></i></div>
+
+                            <iframe name='forsubmit' style='display: none;'></iframe>
+            <form target="" id="searchForm" action=""  >
+              <div class="form-group">
+                <input type="search" name="search" id="search" placeholder="请输入你想要搜索的玩家昵称">
+                 <button type="button" class="submit" id="sub" onclick="checkForm()">Search</button>
+              </div>
+            </form>
+
+            <script> 
+            function checkForm(){
+                var vals = $('#search').val();
+                var dic = {"search":vals};
+                    $.ajax({
+                    url:"search",
+                    data:dic,
+                    type:'POST',
+                    success:function (data) {
+                        if(data=="no user"){
+                            alert("没有该玩家昵称，请输入正确的玩家昵称");
+                        }
+                        else {
+                            window.location.href ="/search?search="+vals;
+                        }
+                    }
+                })
+            }
+
+            </script>
+          </div>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+          <div class="navbar-header">
+            <!-- Navbar Header--><a href="index.html" class="navbar-brand">
+              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
+              <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
+            <!-- Sidebar Toggle Btn-->
+            <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+          </div>
+          <div class="right-menu list-inline no-margin-bottom">
+            <div class="list-inline-item"><a href="#" class="search-open nav-link" ><i class="icon-magnifying-glass-browser"></i></a></div>
+
+            <!-- Tasks end-->
+            <!-- Megamenu-->
+            <div class="list-inline-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="nav-link">Mega <i class="fa fa-ellipsis-v"></i></a>
+              <div class="dropdown-menu megamenu">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row megamenu-buttons text-center">
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-1"><i class="fa fa-clock-o"></i><strong>Demo 1</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-2"><i class="fa fa-clock-o"></i><strong>Demo 2</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-3"><i class="fa fa-clock-o"></i><strong>Demo 3</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-4"><i class="fa fa-clock-o"></i><strong>Demo 4</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link bg-danger"><i class="fa fa-clock-o"></i><strong>Demo 5</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link bg-info"><i class="fa fa-clock-o"></i><strong>Demo 6</strong></a></div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <!-- Sidebar Navigation-->
+
+        <nav id="sidebar">
+          <!-- Sidebar Header-->
+         <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><img src="../../../static/img/head/04head.jpg" alt="..." class="img-fluid rounded-circle"></div>
+          <div class="title">
+            <h1 class="h5">Mark Stephen</h1>
+            <p>Web Designer</p>
+          </div>
+         </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <ul class="list-unstyled">
+          <li class="active"><a href="/index"> <i class="icon-home"></i>主页 </a></li>
+          <li><a href="/tables"> <i class="icon-grid"></i>英雄排名 </a></li>
+          <li><a href="/charts"> <i class="fa fa-bar-chart"></i>英雄能力 </a></li>
+          <li><a href="/forms"> <i class="icon-padnote"></i>Counter </a></li>
+
+
+
+        </ul>
+      </nav>
+      <!-- Sidebar Navigation end-->
+      <div class="page-content">
+        <div class="page-header">
+          <div class="container-fluid">
+            <h2 class="h5 no-margin-bottom">Dashboard</h2>
+          </div>
+        </div>
+
+
+        <section class="no-padding-bottom">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+
+{#                <div class="bar-chart block no-margin-bottom">#}
+{#                  <canvas id="barChartExample1"></canvas>#}
+{#                </div>#}
+{#                <div class="bar-chart block">#}
+{#                  <canvas id="barChartExample2"></canvas>#}
+{#                </div>#}
+                  <div class="box_tu01"></div>
+
+              </div>
+              <div class="col-lg-8">
+{#                <div class="line-cahrt block">#}
+{#                  <canvas id="lineCahrt"></canvas>#}
+{#                    #}
+{#                </div>#}
+
+
+                  <div class="box_tu02">
+
+
+                      <div class="title" align="center"><strong  style="font-size: 25px">
+                      周免英雄</strong></div>
+
+                      <br>
+                      <br>
+
+
+{#                      第一排#}
+
+                      <div class="sidebar-header d-flex align-items-center">
+
+{#                          第一位周免英雄#}
+                    <div class="avatar">
+                        <img id="champ01_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ01_name">...</h1>
+                            <p id="champ01_tag">...</p>
+                          </div>
+
+{#                          第二位周免英雄#}
+                    <div class="avatar">
+                        <img id="champ02_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ02_name">...</h1>
+                            <p id="champ02_tag">...</p>
+                          </div>
+
+
+
+
+
+                          <div class="avatar">
+                        <img id="champ03_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ03_name">...</h1>
+                            <p id="champ03_tag">...</p>
+                          </div>
+
+
+
+
+                          <div class="avatar">
+                        <img id="champ04_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ04_name">...</h1>
+                            <p id="champ04_tag">...</p>
+                          </div>
+
+
+                          <div class="avatar">
+                        <img id="champ05_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ05_name">...</h1>
+                            <p id="champ05_tag">...</p>
+                          </div>
+
+                      </div>
+
+
+                        <br>
+
+{#                      第二排#}
+
+                      <div class="sidebar-header d-flex align-items-center">
+
+{#                          第一位周免英雄#}
+                    <div class="avatar">
+                        <img id="champ06_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ06_name">...</h1>
+                            <p id="champ06_tag">...</p>
+                          </div>
+
+{#                          第二位周免英雄#}
+                    <div class="avatar">
+                        <img id="champ07_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ07_name">...</h1>
+                            <p id="champ07_tag">...</p>
+                          </div>
+
+
+
+
+
+                          <div class="avatar">
+                        <img id="champ08_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ08_name">...</h1>
+                            <p id="champ08_tag">...</p>
+                          </div>
+
+
+
+
+                          <div class="avatar">
+                        <img id="champ09_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ09_name">...</h1>
+                            <p id="champ09_tag">...</p>
+                          </div>
+
+
+                          <div class="avatar">
+                        <img id="champ010_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ010_name">...</h1>
+                            <p id="champ010_tag">...</p>
+                          </div>
+
+                      </div>
+
+
+
+                      <br>
+
+{#                第三排#}
+
+
+                      <div class="sidebar-header d-flex align-items-center">
+
+{#                          第一位周免英雄#}
+                    <div class="avatar">
+                        <img id="champ011_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ011_name">...</h1>
+                            <p id="champ011_tag">...</p>
+                          </div>
+
+{#                          第二位周免英雄#}
+                    <div class="avatar">
+                        <img id="champ012_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ012_name">...</h1>
+                            <p id="champ012_tag">...</p>
+                          </div>
+
+
+
+
+
+                          <div class="avatar">
+                        <img id="champ013_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ013_name">...</h1>
+                            <p id="champ013_tag">...</p>
+                          </div>
+
+
+
+
+                          <div class="avatar">
+                        <img id="champ014_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ014_name">...</h1>
+                            <p id="champ014_tag">...</p>
+                          </div>
+
+
+                          <div class="avatar">
+                        <img id="champ015_img" src="../../../static/img/champimg/157.png"   alt="..." class="img-fluid rounded-circle">
+                    </div>
+                          <div class="title" style="margin-left: 15px;margin-right: 35px">
+                            <h1 class="h5" id="champ015_name">...</h1>
+                            <p id="champ015_tag">...</p>
+                          </div>
+
+                      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#                      <img src="../../../static/img/champimg/1.png" class="img-fluid">#}
+{##}
+{#                      <img src="../../../static/img/champimg/2.png">#}
+
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="no-padding-bottom">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="stats-2-block block d-flex">
+                  <div class="stats-2 d-flex">
+                    <div class="stats-2-arrow low"><i class="fa fa-caret-down"></i></div>
+                    <div class="stats-2-content"><strong class="d-block">32.3</strong><span class="d-block">场均击杀总数</span>
+                      <div class="progress progress-template progress-small">
+                        <div role="progressbar" style="width: 60%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template progress-bar-small dashbg-2"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stats-2 d-flex">
+                    <div class="stats-2-arrow height"><i class="fa fa-caret-up"></i></div>
+                    <div class="stats-2-content"><strong class="d-block">92153.6</strong><span class="d-block">场均伤害量</span>
+                      <div class="progress progress-template progress-small">
+                        <div role="progressbar" style="width: 35%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template progress-bar-small dashbg-3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="stats-3-block block d-flex">
+
+{#                  <div class="stats-3"><strong class="d-block">745</strong><span class="d-block">Total requests</span>#}
+{#                    <div class="progress progress-template progress-small">#}
+{#                      <div role="progressbar" style="width: 35%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template progress-bar-small dashbg-1"></div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="stats-3 d-flex justify-content-between text-center">#}
+{#                    <div class="item"><strong class="d-block strong-sm">4.124</strong><span class="d-block span-sm">Threats</span>#}
+{#                      <div class="line"></div><small>+246</small>#}
+{#                    </div>#}
+{#                    <div class="item"><strong class="d-block strong-sm">2.147</strong><span class="d-block span-sm">Neutral</span>#}
+{#                      <div class="line"></div><small>+416</small>#}
+{#                    </div>#}
+{#                  </div>#}
+
+     <div class="test-input" >
+    <label class="test-label">
+        <input class="test-radio" type="radio" name="radio" value="0" checked="checked" id="KR" onclick="changeTo_kr()">
+        <span class="silde-lr-btn"></span>
+        <span class="silde-text" >韩服</span>
+    </label>
+    <label class="test-label">
+        <input class="test-radio" type="radio" name="radio" value="1" id="EU" onclick="changeTo_eun1()">
+        <span class="silde-lr-btn" ></span>
+        <span class="silde-text" >欧服</span>
+    </label>
+
+     <label class="test-label">
+        <input class="test-radio" type="radio" name="radio" value="1" id="US" onclick="changeTo_JP()">
+        <span class="silde-lr-btn" ></span>
+        <span class="silde-text" >日服</span>
+    </label>
+
+
+
+</div>
+
+                    <div style="margin-left: 10%;font-size: 20px">选择服务器显示实时排行榜</div>
+
+                </div>
+
+                    <div style="width: 820px;height: 120px;font-size: 50px" align="center" >
+                        英雄联盟排行榜</div>
+
+
+              </div>
+              <div class="col-lg-6">
+                <div class="drills-chart block" align="center">
+{#                  <canvas id="lineChart1"></canvas>#}
+                    <div style="font-size:20px">部分周免英雄近期胜率</div>
+                    <div class="box_tu03" ></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="no-padding-bottom">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="user-block block text-center">
+                  <div class="avatar"><img src="../../../static/img/head/01head.jpg" alt="..." class="img-fluid">
+                    <div class="order dashbg-2">1st</div>
+                  </div><a href="#" class="user-title">
+
+                    <h3 class="h5" id="Summ01_name"></h3><span id="Summ01_tier"></span></a>
+                  <div class="contributions" id="Summ01_point"></div>
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ01_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ01_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ01_queueType"></strong></div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="user-block block text-center">
+                  <div class="avatar"><img src="../../../static/img/head/05head.jpg" alt="..." class="img-fluid">
+                    <div class="order dashbg-1">2nd</div>
+                  </div><a href="#" class="user-title">
+
+                    <h3 class="h5" id="Summ02_name"></h3><span id="Summ02_tier"></span></a>
+                  <div class="contributions" id="Summ02_point"></div>
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ02_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ02_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ02_queueType"></strong></div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="user-block block text-center">
+                  <div class="avatar"><img src="../../../static/img/head/06head.jpg" alt="..." class="img-fluid">
+                    <div class="order dashbg-4">3rd</div>
+                  </div><a href="#" class="user-title">
+
+                    <h3 class="h5" id="Summ03_name"></h3><span id="Summ03_tier"></span></a>
+                  <div class="contributions" id="Summ03_point"></div>
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ03_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ03_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ03_queueType"></strong></div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="public-user-block block">
+              <div class="row d-flex align-items-center">                   
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">4th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/06head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+
+                    <strong class="d-block" id="Summ04_name">
+
+                    </strong><span class="d-block" id="Summ04_tier"></span></a>
+
+
+                </div>
+
+
+                <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ04_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ04_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ04_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ04_queueType"></strong></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="public-user-block block">
+              <div class="row d-flex align-items-center">                   
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">5th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/02head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+                    <strong class="d-block" id="Summ05_name"></strong><span class="d-block" id="Summ05_tier"></span></a>
+                </div>
+
+               <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ05_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ05_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ05_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ05_queueType"></strong></div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+{#第六名#}
+            <div class="public-user-block block">
+              <div class="row d-flex align-items-center">                   
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">6th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/03head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+                    <strong class="d-block" id="Summ06_name"></strong><span class="d-block" id="Summ06_tier"></span></a>
+                </div>
+
+
+               <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ06_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ06_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ06_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ06_queueType"></strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+{#              第七名#}
+          <div class="public-user-block block">
+              <div class="row d-flex align-items-center">
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">7th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/07head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+                    <strong class="d-block" id="Summ07_name"></strong><span class="d-block" id="Summ07_tier"></span></a>
+                </div>
+
+
+               <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ07_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ07_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ07_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ07_queueType"></strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+{#              第八名#}
+              <div class="public-user-block block">
+              <div class="row d-flex align-items-center">
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">8th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/08head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+                    <strong class="d-block" id="Summ08_name"></strong><span class="d-block" id="Summ08_tier"></span></a>
+                </div>
+
+
+               <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ08_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ08_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ08_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ08_queueType"></strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+{#第九名#}
+
+                          <div class="public-user-block block">
+              <div class="row d-flex align-items-center">
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">9th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/09head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+                    <strong class="d-block" id="Summ09_name"></strong><span class="d-block" id="Summ09_tier"></span></a>
+                </div>
+
+
+               <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ09_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ09_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ09_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ09_queueType"></strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+{#              第十名#}
+            <div class="public-user-block block">
+              <div class="row d-flex align-items-center">
+                <div class="col-lg-4 d-flex align-items-center">
+                  <div class="order">10th</div>
+                  <div class="avatar"> <img src="../../../static/img/head/010head.jpg" alt="..." class="img-fluid"></div><a href="#" class="name">
+                    <strong class="d-block" id="Summ010_name"></strong><span class="d-block" id="Summ010_tier"></span></a>
+                </div>
+
+
+               <div class="col-lg-4 text-center">
+                  <div class="contributions" id="Summ010_point"></div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="details d-flex">
+                    <div class="item"><i>rank</i><strong id="Summ010_rank"></strong></div>
+                    <div class="item"><i>胜率</i><strong id="Summ010_rate"></strong></div>
+                    <div class="item"><i>模式</i><strong id="Summ010_queueType"></strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+
+        </section>
+        <section class="margin-bottom-sm">
+          <div class="container-fluid">
+            <div class="row d-flex align-items-stretch">
+
+            </div>
+          </div>
+        </section>
+        <section class="no-padding-bottom">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6">
+{#                    删除部分#}
+              <div class="col-lg-6">                                           
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+{#                    删除部分#}
+              </div>
+              <div class="col-lg-4">
+
+              </div>
+              <div class="col-lg-4">
+{#                    删除部分#}
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer__block block no-margin-bottom">
+            <div class="container-fluid text-center">
+              <p class="no-margin-bottom">Copyright &copy; 2019.Company name All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="../../../static/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="../../../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../static/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="../../../static/vendor/chart.js/Chart.min.js"></script>
+    <script src="../../../static/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../../../static/js/charts-home.js"></script>
+    <script src="../../../static/js/front.js"></script>
+{#    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>#}
+    <script src="../../../static/js/index.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script src="../../../static/vendor/jquery/jquery.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+
+      var sumrate = new Array(30);
+
+      getsumwinrate();
+
+      function getsumwinrate() {
+         $.ajax({
+             url:"getSumWinRate",
+             type:"GET",
+             {#dataType:"json",#}
+             success:function (data) {
+                 var temp = eval(data);
+                 for(var i=0;i<temp.length;i++){
+                     sumrate[i] = temp[i];
+
+                 }
+
+
+             }
+
+         })
+     }
+
+
+
+
+
+
+    function getkill() {
+    $.ajax({
+        url:'killrate',
+        dataType: 'json',
+        type: 'GET',
+        cache:true,
+        success:function (data) {
+            window.diffKill = data;
+            tu01(diffKill);
+        }
+    })
+}
+
+
+    getkill();
+    getChampionFree();
+
+
+
+
+
+
+      function sumShow() {
+
+    $.ajax({
+        url:'getSummoner',
+        type:'GET',
+        dataType:'json',
+        success:function (data) {
+            for(var i=0;i<10;i++) {
+                document.getElementById("Summ0"+(i+1).toString()+"_name").innerHTML = data[i]['summonerName'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rank").innerHTML = data[i]['rank'];
+                document.getElementById("Summ0"+(i+1).toString()+"_tier").innerHTML = data[i]['tier'];
+                document.getElementById("Summ0"+(i+1).toString()+"_point").innerHTML = data[i]['leaguePoints'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rate").innerHTML = sumrate[i].toString()+"%";
+                document.getElementById("Summ0"+(i+1).toString()+"_queueType").innerHTML = "5V5单排";
+            }
+
+        }
+    })
+
+}
+
+      sumShow();
+      setTimeout(sumShow,3600000);
+
+
+
+      function getChampionFree() {
+
+          $.ajax({
+              url:'championFree',
+              dataType:'json',
+              type:'GET',
+              success:function (data) {
+
+                  {#alert(typeof (data[0]));#}
+
+
+                    for(var i=0;i<data.length;i++){
+                        temp = i+1
+                        $("#champ0"+temp+"_img").attr('src', "../../../static/img/champimg/"+data[i]['Champid']+".png");
+                        $("#champ0"+temp+"_name").text(data[i]['Champname']);
+                        $("#champ0"+temp+"_tag").text(data[i]['Champtag']);
+                  }
+
+                    getwinRate(data);
+              }
+          })
+
+      }
+
+
+    function getwinRate(data2) {
+
+        var data={
+            data:JSON.stringify(data2)
+
+        }
+
+        //传入必须是字典
+
+          $.ajax({
+              url:'getWeekWinRate',
+              dataType:'json',
+              type:'POST',
+              name:'001',
+              data:data,
+              success:function (data) {
+
+                  myechart = echarts.init(document.querySelector('.box_tu03'));
+
+
+                  var dataX = new Array();
+
+                  var dataS = new Array();
+
+                  for (var i=0;i<6;i++){
+
+                      dataX[i] =  data[i]['cname'];
+                      dataS[i] = parseFloat( data[i]['winrate'] ).toFixed(2);
+
+
+                  }
+
+
+
+
+                     var  option = {
+                        xAxis: {
+                            type: 'category',
+                            data:dataX,
+                            axisLabel:{
+                                show:true,
+                                textStyle: {
+                                    color: 'rgba(255,31,41,0.87)',
+                                    fontSize:15
+                                }
+                            }
+                        },
+
+                        yAxis: {
+                            type: 'value'
+
+                        },
+                        series: [{
+                            data: dataS,
+                            type: 'bar',
+                            showBackground: true,
+                            backgroundStyle: {
+                                color: 'rgba(220, 220, 220, 0.8)'
+                            },
+                            itemStyle: {
+                                normal:{
+                                    label:{
+                                        show:true,
+                                        position:'top',
+                                        textStyle: {
+                                            color:'#ff3724',
+                                            fontSize: 15
+                                        }
+                                    }
+                                }
+                            }
+                        }]
+                    };
+
+    myechart.setOption(option);
+
+
+
+              }
+
+          })
+
+    }
+
+
+
+
+
+
+
+
+
+
+function changeTo_kr() {
+
+          $.ajax({
+              url:'getchangeFWQ',
+              type:'POST',
+              dataType:'json',
+              data:{'fwq':'kr'},
+              success:function (data) {
+            for(var i=0;i<10;i++) {
+                document.getElementById("Summ0"+(i+1).toString()+"_name").innerHTML = data[i]['summonerName'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rank").innerHTML = data[i]['rank'];
+                document.getElementById("Summ0"+(i+1).toString()+"_tier").innerHTML = data[i]['tier'];
+                document.getElementById("Summ0"+(i+1).toString()+"_point").innerHTML = data[i]['leaguePoints'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rate").innerHTML = sumrate[i].toString()+"%";
+                document.getElementById("Summ0"+(i+1).toString()+"_queueType").innerHTML = "5V5单排";
+            }
+
+
+              }
+          })
+
+}
+
+
+function changeTo_eun1() {
+
+          $.ajax({
+              url:'getchangeFWQ',
+              type:'POST',
+              dataType:'json',
+              data:{'fwq':'eun1'},
+              success:function (data) {
+
+             for(var i=0;i<10;i++) {
+                document.getElementById("Summ0"+(i+1).toString()+"_name").innerHTML = data[i]['summonerName'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rank").innerHTML = data[i]['rank'];
+                document.getElementById("Summ0"+(i+1).toString()+"_tier").innerHTML = data[i]['tier'];
+                document.getElementById("Summ0"+(i+1).toString()+"_point").innerHTML = data[i]['leaguePoints'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rate").innerHTML = sumrate[i+10].toString()+"%";
+                document.getElementById("Summ0"+(i+1).toString()+"_queueType").innerHTML = "5V5单排";
+            }
+              }
+          })
+
+}
+
+
+
+function changeTo_JP() {
+
+          $.ajax({
+              url:'getchangeFWQ',
+              type:'POST',
+              dataType:'json',
+              data:{'fwq':'jp1'},
+              success:function (data) {
+
+             for(var i=0;i<10;i++) {
+                document.getElementById("Summ0"+(i+1).toString()+"_name").innerHTML = data[i]['summonerName'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rank").innerHTML = data[i]['rank'];
+                document.getElementById("Summ0"+(i+1).toString()+"_tier").innerHTML = data[i]['tier'];
+                document.getElementById("Summ0"+(i+1).toString()+"_point").innerHTML = data[i]['leaguePoints'];
+                document.getElementById("Summ0"+(i+1).toString()+"_rate").innerHTML = sumrate[i+20].toString()+"%";
+                document.getElementById("Summ0"+(i+1).toString()+"_queueType").innerHTML = "5V5单排";
+            }
+
+              }
+          })
+
+}
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+  </body>
+</html>

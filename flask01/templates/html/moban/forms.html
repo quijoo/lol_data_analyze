@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../../../static/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../../../static/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../../../static/css/iconfont.css">
+    <link rel="stylesheet" href="../../../static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../../../static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="stylesheet" href="../../../static/css/junyi.css">
+    <link rel="shortcut icon" href="../../../static/img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="search-panel">
+            <div class="search-inner d-flex align-items-center justify-content-center">
+                <div class="close-btn">Close <i class="fa fa-close"></i></div>
+            <iframe name='forsubmit' style='display: none;'></iframe>
+            <form target="" id="searchForm" action=""  >
+              <div class="form-group">
+                <input type="search" name="search" id="search" placeholder="请输入你想要搜索的玩家昵称">
+                 <button type="button" class="submit" id="sub" onclick="checkForm()">Search</button>
+              </div>
+            </form>
+
+            <script> 
+            function checkForm(){
+                var vals = $('#search').val();
+                var dic = {"search":vals};
+                    $.ajax({
+                    url:"search",
+                    data:dic,
+                    type:'POST',
+                    success:function (data) {
+                        if(data=="no user"){
+                            alert("没有该玩家昵称，请输入正确的玩家昵称");
+                        }
+                        else {
+                            window.location.href ="/search?search="+vals;
+                        }
+                    }
+                })
+            }
+
+            </script>
+            </div>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="navbar-header">
+                <!-- Navbar Header--><a href="/index" class="navbar-brand">
+                <div class="brand-text brand-big visible text-uppercase"><strong
+                        class="text-primary">LOLdata</strong><strong>anaylise</strong></div>
+                <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div>
+            </a>
+                <!-- Sidebar Toggle Btn-->
+                <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+            </div>
+            <div class="right-menu list-inline no-margin-bottom">
+                <div class="list-inline-item"><a href="#" class="search-open nav-link"><i
+                        class="icon-magnifying-glass-browser"></i></a></div>
+
+                <!-- Megamenu-->
+                <div class="list-inline-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="nav-link">Mega
+                    <i class="fa fa-ellipsis-v"></i></a>
+                    <div class="dropdown-menu megamenu">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                    <li><a href="#">Sed ut perspiciatis</a></li>
+                                    <li><a href="#">Voluptatum deleniti</a></li>
+                                    <li><a href="#">At vero eos</a></li>
+                                    <li><a href="#">Consectetur adipiscing</a></li>
+                                    <li><a href="#">Duis aute irure</a></li>
+                                    <li><a href="#">Necessitatibus saepe</a></li>
+                                    <li><a href="#">Maiores alias</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                    <li><a href="#">Sed ut perspiciatis</a></li>
+                                    <li><a href="#">Voluptatum deleniti</a></li>
+                                    <li><a href="#">At vero eos</a></li>
+                                    <li><a href="#">Consectetur adipiscing</a></li>
+                                    <li><a href="#">Duis aute irure</a></li>
+                                    <li><a href="#">Necessitatibus saepe</a></li>
+                                    <li><a href="#">Maiores alias</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                    <li><a href="#">Sed ut perspiciatis</a></li>
+                                    <li><a href="#">Voluptatum deleniti</a></li>
+                                    <li><a href="#">At vero eos</a></li>
+                                    <li><a href="#">Consectetur adipiscing</a></li>
+                                    <li><a href="#">Duis aute irure</a></li>
+                                    <li><a href="#">Necessitatibus saepe</a></li>
+                                    <li><a href="#">Maiores alias</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#">Lorem ipsum dolor</a></li>
+                                    <li><a href="#">Sed ut perspiciatis</a></li>
+                                    <li><a href="#">Voluptatum deleniti</a></li>
+                                    <li><a href="#">At vero eos</a></li>
+                                    <li><a href="#">Consectetur adipiscing</a></li>
+                                    <li><a href="#">Duis aute irure</a></li>
+                                    <li><a href="#">Necessitatibus saepe</a></li>
+                                    <li><a href="#">Maiores alias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row megamenu-buttons text-center">
+                            <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-1"><i
+                                    class="fa fa-clock-o"></i><strong>Demo 1</strong></a></div>
+                            <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-2"><i
+                                    class="fa fa-clock-o"></i><strong>Demo 2</strong></a></div>
+                            <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-3"><i
+                                    class="fa fa-clock-o"></i><strong>Demo 3</strong></a></div>
+                            <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-4"><i
+                                    class="fa fa-clock-o"></i><strong>Demo 4</strong></a></div>
+                            <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link bg-danger"><i
+                                    class="fa fa-clock-o"></i><strong>Demo 5</strong></a></div>
+                            <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link bg-info"><i
+                                    class="fa fa-clock-o"></i><strong>Demo 6</strong></a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Megamenu end     -->
+
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <div class="d-flex align-items-stretch">
+        <!-- Sidebar Navigation-->
+        <nav id="sidebar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="avatar"><img src="../../../static/img/avatar-6.jpg" alt="..."
+                                         class="img-fluid rounded-circle"></div>
+                <div class="title">
+                    <h1 class="h5">Mark Stephen</h1>
+                    <p>Web Designer</p>
+                </div>
+            </div>
+            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+            <ul class="list-unstyled">
+                <li><a href="/index"> <i class="icon-home"></i>主页 </a></li>
+                <li><a href="/tables"> <i class="icon-grid"></i>英雄排名 </a></li>
+                <li><a href="/charts"> <i class="fa fa-bar-chart"></i>英雄能力 </a></li>
+                <li class="active"><a href="/forms"> <i class="icon-padnote"></i>Counter </a></li>
+
+            </ul>
+        </nav>
+        <!-- Sidebar Navigation end-->
+
+        <div class="page-content">
+            <!-- Page Header-->
+            <div class="page-header no-margin-bottom">
+                <div class="container-fluid">
+                    <h2 class="h5 no-margin-bottom">Basic forms</h2>
+                </div>
+            </div>
+            <!-- Breadcrumb-->
+            <div class="container-fluid">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                    <li class="breadcrumb-item">Counter</li>
+                    <li class="breadcrumb-item active">英雄定位</li>
+                </ul>
+            </div>
+
+
+
+{#            <section class="no-padding-top">#}
+{#                <div class="container-fluid">#}
+{#                    <div class="row">#}
+{#                        <!-- Inline Form-->#}
+{#                        <div class="col-lg-8-gai">#}
+{#                            <div class="block-body">#}
+                                <section class="no-padding-top no-padding-bottom">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-3-gai col-sm-6">
+                                                <div id="button_1_top" class="onchange statistic-block block">
+                                                    <div class="pointer-box progress-details d-flex align-items-end justify-content-between"
+                                                         onclick="position_act(1)">
+                                                        <div class="title">
+                                                            <svg class="icon" aria-hidden="true">
+                                                                <use xlink:href="#icon-jian"></use>
+                                                            </svg>
+                                                            <strong>上单</strong>
+                                                        </div>
+                                                        <div class="number dashtext-1">53</div>
+                                                    </div>
+                                                    <div class="progress progress-template">
+                                                        <div role="progressbar" style="width: 53%" aria-valuenow="30"
+                                                             aria-valuemin="0" aria-valuemax="100"
+                                                             class="progress-bar progress-bar-template dashbg-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3-gai col-sm-6">
+                                                <div id="button_1_jungle" class="onchange statistic-block block">
+                                                    <div class="pointer-box progress-details d-flex align-items-end justify-content-between"
+                                                         onclick="position_act(2)">
+                                                        <div class="title">
+                                                            <svg class="icon" aria-hidden="true">
+                                                                <use xlink:href="#icon-bishou"></use>
+                                                            </svg>
+                                                            <strong>打野</strong>
+                                                        </div>
+                                                        <div class="number dashtext-2">40</div>
+                                                    </div>
+                                                    <div class="progress progress-template">
+                                                        <div role="progressbar" style="width: 40%" aria-valuenow="70"
+                                                             aria-valuemin="0" aria-valuemax="100"
+                                                             class="progress-bar progress-bar-template dashbg-2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3-gai col-sm-6">
+                                                <div class="onchange statistic-block block">
+                                                    <div class="pointer-box progress-details d-flex align-items-end justify-content-between"
+                                                    onclick="position_act(3)">
+                                                        <div class="title">
+                                                            <svg class="icon" aria-hidden="true">
+                                                                <use xlink:href="#icon-mofayuyinxunlian"></use>
+                                                            </svg>
+                                                            <strong>中单</strong>
+                                                        </div>
+                                                        <div class="number dashtext-3">56</div>
+                                                    </div>
+                                                    <div class="progress progress-template">
+                                                        <div role="progressbar" style="width: 56%" aria-valuenow="55"
+                                                             aria-valuemin="0" aria-valuemax="100"
+                                                             class="progress-bar progress-bar-template dashbg-3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3-gai col-sm-6">
+                                                <div class="onchange statistic-block block">
+                                                    <div class="pointer-box progress-details d-flex align-items-end justify-content-between"
+                                                    onclick="position_act(4)">
+                                                        <div class="title">
+                                                            <svg class="icon" aria-hidden="true">
+                                                                <use xlink:href="#icon-gongjian"></use>
+                                                            </svg>
+                                                            <strong>ADC</strong>
+                                                        </div>
+                                                        <div class="number dashtext-4">21</div>
+                                                    </div>
+                                                    <div class="progress progress-template">
+                                                        <div role="progressbar" style="width: 21%" aria-valuenow="35"
+                                                             aria-valuemin="0" aria-valuemax="100"
+                                                             class="progress-bar progress-bar-template dashbg-4"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3-gai col-sm-6">
+                                                <div class="onchange statistic-block block">
+                                                    <div class="pointer-box progress-details d-flex align-items-end justify-content-between"
+                                                    onclick="position_act(5)">
+                                                        <div class="title">
+                                                            <svg class="icon" aria-hidden="true">
+                                                                <use xlink:href="#icon-dun"></use>
+                                                            </svg>
+                                                            <strong>辅助</strong>
+                                                        </div>
+                                                        <div class="number dashtext-3">37</div>
+                                                    </div>
+                                                    <div class="progress progress-template">
+                                                        <div role="progressbar" style="width: 55%" aria-valuenow="55"
+                                                             aria-valuemin="0" aria-valuemax="100"
+                                                             class="progress-bar progress-bar-template dashbg-3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="no-padding-top no-padding-bottom">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <!英雄图表>
+                                            <div class="col-lg-6-gai">
+                                                <div id="top" class="pie-chart chart block" style="display: block">
+                                                    <div class="title"><strong>版本上单-登场率</strong></div>
+                                                        <div class="pie-chart chart margin-bottom-sm">
+                                                            <canvas id="pieChartCustom1"></canvas>
+                                                        </div>
+                                                </div>
+                                                <div id="jungle" class="pie-chart chart block" style="display: none">
+                                                    <div class="title"><strong>版本打野-登场率</strong></div>
+                                                    <div class="pie-chart chart margin-bottom-sm">
+                                                        <canvas id="pieChartCustom2"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div id="mid" class="pie-chart chart block" style="display: none">
+                                                    <div class="title"><strong>版本中单-登场率</strong></div>
+                                                    <div class="pie-chart chart margin-bottom-sm">
+                                                        <canvas id="pieChartCustom3"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div id="ADC" class="pie-chart chart block" style="display: none">
+                                                    <div class="title"><strong>版本ADC-登场率</strong></div>
+                                                    <div class="pie-chart chart margin-bottom-sm">
+                                                        <canvas id="pieChartCustom4"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div id="support" class="pie-chart chart block" style="display: none">
+                                                    <div class="title"><strong>版本辅助-登场率</strong></div>
+                                                    <div class="pie-chart chart margin-bottom-sm">
+                                                        <canvas id="pieChartCustom5"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!end>
+
+                                            <!英雄栏>
+                                            <div class="col-lg-6-gai panel-body" style="height: 430px; overflow-y:scroll">
+                                                <div style="border: 1px  #2d3035; width: 90%; margin: 0 auto;">
+                                                <!上单>
+                                                <div id= "top_champions" class="messages-block block " style="display: block">
+                                                    <div class="title"><strong>上单英雄</strong></div>
+                                                    <div class="messages">
+                                                        {% for champion in clist["TOPSOLO"] %}
+                                                            <a  href="/conter?id={{champion["cid"]}}" class="message d-flex align-items-center" value="hhh" >
+                                                            <div class="profile" ><img src="'../../../static/img/champImg/{{champion["cid"]}}.png "></div>
+                                                            <div class="content">   <strong class="d-block">{{champion["cname"]}}</strong><span class="d-block">上单</span></div></a>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                                <!打野>
+                                                <div id= "jungle_champions" class="messages-block block " style="display: none">
+                                                    <div class="title"><strong>打野英雄</strong></div>
+                                                    <div class="messages">
+                                                        {% for champion in clist["JUNGLE"] %}
+                                                            <a  href="/conter?id={{champion["cid"]}}" class="message d-flex align-items-center" value="hhh" >
+                                                            <div class="profile" ><img src="'../../../static/img/champImg/{{champion["cid"]}}.png "></div>
+                                                            <div class="content">   <strong class="d-block">{{champion["cname"]}}</strong><span class="d-block">打野</span></div></a>
+                                                        {% endfor %}
+
+                                                    </div>
+                                                </div>
+                                                <!中单>
+                                                <div id= "mid_champions" class="messages-block block " style="display: none">
+                                                    <div class="title"><strong>中单英雄</strong></div>
+                                                    <div class="messages">
+                                                        {% for champion in clist["MIDDLE"] %}
+                                                            <a  href="/conter?id={{champion["cid"]}}" class="message d-flex align-items-center" value="hhh" >
+                                                            <div class="profile" ><img src="'../../../static/img/champImg/{{champion["cid"]}}.png "></div>
+                                                            <div class="content">   <strong class="d-block">{{champion["cname"]}}</strong><span class="d-block">中单</span></div></a>
+                                                        {% endfor %}
+
+                                                    </div>
+                                                </div>
+                                                <!ADC>
+                                                <div id= "adc_champions" class="messages-block block " style="display: none">
+                                                    <div class="title"><strong>ADC英雄</strong></div>
+                                                    <div class="messages">
+                                                       {% for champion in clist["BOTTOM"] %}
+                                                            <a  href="/conter?id={{champion["cid"]}}" class="message d-flex align-items-center" value="hhh" >
+                                                            <div class="profile" ><img src="'../../../static/img/champImg/{{champion["cid"]}}.png "></div>
+                                                            <div class="content">   <strong class="d-block">{{champion["cname"]}}</strong><span class="d-block">ADC</span></div></a>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                                <!辅助>
+                                                <div id= "support_champions" class="messages-block block " style="display: none">
+                                                    <div class="title"><strong>辅助英雄</strong></div>
+                                                    <div class="messages">
+                                                        {% for champion in clist["SUPPORT"] %}
+                                                            <a  href="/conter?id={{champion["cid"]}}" class="message d-flex align-items-center" value="hhh" >
+                                                            <div class="profile" ><img src="'../../../static/img/champImg/{{champion["cid"]}}.png "></div>
+                                                            <div class="content">   <strong class="d-block">{{champion["cname"]}}</strong><span class="d-block">辅助</span></div></a>
+                                                        {% endfor %}
+                                                </div>
+                                            </div>
+                                            <!英雄栏end>
+                                                </div>
+
+                                        </div>
+                                    </div>
+                                 </div>
+                                </section>
+
+
+
+
+        </div>
+    </div>
+
+
+<!尾页>
+<footer class="footer">
+    <div class="footer__block block no-margin-bottom">
+        <div class="container-fluid text-center">
+            <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            <p class="no-margin-bottom">Copyright &copy; 2019.Company name All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<div id="Tname0" hidden>{{Tname0}}</div>
+<div id="Tname1" hidden>{{Tname1}}</div>
+<div id="Tname2" hidden>{{Tname2}}</div>
+<div id="Tname3" hidden>{{Tname3}}</div>
+<!-- JavaScript files-->
+<script src="../../../static/vendor/jquery/jquery.min.js"></script>
+<script src="../../../static/vendor/popper.js/umd/popper.min.js"></script>
+<script src="../../../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../static/vendor/jquery.cookie/jquery.cookie.js"></script>
+<script src="../../../static/vendor/chart.js/Chart.min.js"></script>
+<script src="../../../static/vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../../static/js/front.js"></script>
+<script src="../../../static/js/iconfont.js"></script>
+<script src="../../../static/js/junyi.js"></script>
+<script src="../../../static/js/charts-custom.js"></script>
+
+
+
+
+
+</body>
+</html>

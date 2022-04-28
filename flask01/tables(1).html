@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../../../static/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="../../../static/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../../../static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../../../static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../../../static/img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <style>
+        div {
+                position: relative;
+                line-height: 30px;
+            }
+
+            input[type="radio"] {
+                width: 15px;
+                height: 15px;
+                opacity: 0;
+            }
+
+            label {
+                position: absolute;
+                left: 5px;
+                top: 3px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 1px solid #999;
+            }
+            /*设置选中的input的样式*/
+            /* + 是兄弟选择器,获取选中后的label元素*/
+            input:checked+label {
+                background-color: black;
+                border: 1px solid black;
+            }
+            input:checked+label::after {
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 10px;
+                top: 3px;
+                left: 6px;
+                border: 2px solid #fff;
+                border-top: none;
+                border-left: none;
+                transform: rotate(45deg)
+            }
+        .overline2 {
+            max-width: 200px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;/* 行数 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+
+  </head>
+  <body>
+    <header class="header">   
+      <nav class="navbar navbar-expand-lg">
+        <div class="search-panel">
+          <div class="search-inner d-flex align-items-center justify-content-center">
+            <div class="close-btn">Close <i class="fa fa-close"></i></div>
+            <form id="searchForm" action="#">
+              <div class="form-group">
+                <input type="search" name="search" placeholder="What are you searching for...">
+                <button type="submit" class="submit">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+          <div class="navbar-header">
+            <!-- Navbar Header--><a href="index.html" class="navbar-brand">
+              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
+              <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
+            <!-- Sidebar Toggle Btn-->
+            <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+          </div>
+          <div class="right-menu list-inline no-margin-bottom">
+            <div class="list-inline-item"><a href="#" class="search-open nav-link" ><i class="icon-magnifying-glass-browser"></i></a></div>
+
+            <!-- Tasks end-->
+            <!-- Megamenu-->
+            <div class="list-inline-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="nav-link">Mega <i class="fa fa-ellipsis-v"></i></a>
+              <div class="dropdown-menu megamenu">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6"><strong class="text-uppercase">Elements Heading</strong>
+                    <ul class="list-unstyled mb-3">
+                      <li><a href="#">Lorem ipsum dolor</a></li>
+                      <li><a href="#">Sed ut perspiciatis</a></li>
+                      <li><a href="#">Voluptatum deleniti</a></li>
+                      <li><a href="#">At vero eos</a></li>
+                      <li><a href="#">Consectetur adipiscing</a></li>
+                      <li><a href="#">Duis aute irure</a></li>
+                      <li><a href="#">Necessitatibus saepe</a></li>
+                      <li><a href="#">Maiores alias</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row megamenu-buttons text-center">
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-1"><i class="fa fa-clock-o"></i><strong>Demo 1</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-2"><i class="fa fa-clock-o"></i><strong>Demo 2</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-3"><i class="fa fa-clock-o"></i><strong>Demo 3</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link dashbg-4"><i class="fa fa-clock-o"></i><strong>Demo 4</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link bg-danger"><i class="fa fa-clock-o"></i><strong>Demo 5</strong></a></div>
+                  <div class="col-lg-2 col-md-4"><a href="#" class="d-block megamenu-button-link bg-info"><i class="fa fa-clock-o"></i><strong>Demo 6</strong></a></div>
+                </div>
+              </div>
+            </div>
+            <!-- Megamenu end     -->
+            <!-- Languages dropdown    -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <!-- Sidebar Navigation-->
+      <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><img src="../../../static/img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
+          <div class="title">
+            <h1 class="h5">Mark Stephen</h1>
+            <p>Web Designer</p>
+          </div>
+         </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <ul class="list-unstyled">
+          <li><a href="/index"> <i class="icon-home"></i>主页 </a></li>
+          <li class="active"><a href="/tables"> <i class="icon-grid"></i>英雄排名 </a></li>
+          <li><a href="/charts"> <i class="fa fa-bar-chart"></i>英雄能力 </a></li>
+          <li><a href="/forms"> <i class="icon-padnote"></i>Counter </a></li>
+
+        </ul>
+      </nav>
+      <!-- Sidebar Navigation end   页面内容部分 -->
+      <div class="page-content">
+        <!-- Page Header-->
+        <div class="page-header no-margin-bottom">
+          <div class="container-fluid">
+            <h2 class="h5 no-margin-bottom">英雄排名</h2>
+          </div>
+        </div>
+        <!-- Breadcrumb-->
+        <div class="container-fluid">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home </a></li>
+            <li class="breadcrumb-item active">Hero Rank        </li>
+          </ul>
+        </div>
+        <section class="no-padding-top">
+          <div class="container-fluid">
+            <div class="row">
+              <!--表格部分------------------------------------------------------------------------>
+              <!--出场率表-->
+              <div class="col-lg-6" >
+                <div class="block margin-bottom-sm">
+                  <div class="title"><strong>Hero Ranking Table</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Name</th>
+
+                          <th id="select"></th>
+                          <th>Role</th>
+                        </tr>
+                      </thead>
+                      <tbody id="t1">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!--出场率表排名标准选择-->
+             <div class="col-lg-6" >
+                <div class="block margin-bottom-sm">
+                  <div class="title"><strong>ORDER BY...</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table">
+                      <form action="" method="get">
+                        <div>
+                         <input  id="check1-1" type="radio" name="Role" value="appear" >
+                         <label for="check1-1"></label>
+                         <span style="font-size: 18px;font-weight:800">&nbsp&nbsp&nbsp&nbsp APPEAR（按出场率）</span><br>
+                        </div>
+                        <div>
+                         <input id="check1-2" type="radio" name="Role" value="win" checked>
+                         <label for="check1-2"></label>
+                         <span style="font-size: 18px;font-weight:800">&nbsp&nbsp&nbsp&nbsp   WIN（按胜率）</span><br>
+                        </div>
+
+                        <div>
+                         <input id="check1-3" type="radio" name="Role" value="kills">
+                         <label for="check1-3"></label>
+                         <span style="font-size: 18px">&nbsp&nbsp&nbsp&nbsp   KILLS（场均击杀数）</span><br>
+                        </div>
+                        <div>
+                         <input id="check1-4" type="radio" name="Role" value="killed">
+                         <label for="check1-4"></label>
+                         <span style="font-size: 18px">&nbsp&nbsp&nbsp&nbsp    KILLED（场均被杀）</span><br>
+                        </div>
+                        <div>
+                         <input id="check1-5" type="radio" name="Role" value="heal">
+                         <label for="check1-5"></label>
+                         <span style="font-size: 18px">&nbsp&nbsp&nbsp&nbsp    HEAL（场均治疗）</span><br>
+                        </div>
+                        <div>
+                         <input id="check1-6" type="radio" name="Role" value="damage">
+                         <label for="check1-6"></label>
+                         <span style="font-size: 18px">&nbsp&nbsp&nbsp&nbsp    DAMAGE（场均伤害）</span><br>
+                        </div>
+
+                        <div>
+                         <input id="check1-7" type="radio" name="Role" value="damaged">
+                         <label for="check1-7"></label>
+                         <span style="font-size: 18px">&nbsp&nbsp&nbsp&nbsp    DAMAGED（场均承伤）</span><br>
+                        </div>
+                        <div>
+                         <input id="check1-8" type="radio" name="Role" value="assist">
+                         <label for="check1-8"></label>
+                         <span style="font-size: 18px">&nbsp&nbsp&nbsp&nbsp    ASSIST（场均助攻）</span><br>
+                        </div>
+                    <!--     <input type="submit" name="update">  更新排名表 -->
+                          <br>
+                      </form>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="block margin-bottom-sm" >
+                 <div style="font-size: 18px">TOP1</div>
+                 <div id = "s1">
+                 </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer__block block no-margin-bottom">
+            <div class="container-fluid text-center">
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+              <p class="no-margin-bottom"> Copyright &copy; 2019.Company name All rights reserved.
+                  <a target="_blank"></a></p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="../../../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../static/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="../../../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../static/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="../../../static/vendor/chart.js/Chart.min.js"></script>
+    <script src="../../../static/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../../../static/js/front.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          $.ajax({
+               url: "/Test",
+               type: "POST",
+               data: {data: "win"},
+               success: function(data) {
+
+                   var sort_by = data.sort_by;
+                   var sort_data = data[sort_by];
+                   var d = data['cids'];
+                   var role = data['r'];
+                   var name = data.name;
+
+                   var story = data.stroy;
+                   var attack = data.attack;
+                   var defense = data.defense;
+                   var magic = data.magic;
+                   var difficulty = data.difficulty;
+                   {#var option = {#}
+                   {#     dataset: {#}
+                   {#         source: [#}
+                   {#             ['amount', 'product'],#}
+                   {#             [ difficulty, 'Difficulty'],#}
+                   {#             [ magic, 'Magic'],#}
+                   {#             [ defense, 'Defense'],#}
+                   {#             [ attack, 'Attack']#}
+                   {#         ]#}
+                   {#     },#}
+                   {#     grid: {containLabel: true},#}
+                   {#     xAxis: {name: 'Value'},#}
+                   {#     yAxis: {type: 'category'},#}
+                   {#     series: [#}
+                   {#         {#}
+                   {#             type: 'bar',#}
+                   {#             encode: {#}
+                   {#                 // Map the "amount" column to X axis.#}
+                   {#                 x: 'amount',#}
+                   {#                 // Map the "product" column to Y axis#}
+                   {#                 y: 'product'#}
+                   {#             }#}
+                   {#         }#}
+                   {#     ]#}
+                   {# };#}
+
+                   $("#select").empty();$("#t1").empty();$("#s1").empty();
+                   $("#select").append(sort_by.toUpperCase())
+                   for (i = 0; i< sort_data.length; i++){
+                       n = i+1;
+                       $("#t1").append(
+                         "<tr> <th scope='row'>"+ n +"</th> " +
+                           "<th><img src='../../../static/img/champImg/"+ d[i] + ".png' width='45' height='45' alt='...' class='img-fluid rounded-circle'>&nbsp&nbsp" + name[i]  + "</th> " +
+                           "<td>" + sort_data[i]  + "</td>" +
+                           "<td>" +  role[i] + "</td> </tr>"
+                        )
+                   }
+                   $("#s1").append(
+                     "<img src='../../../static/img/champImg/"+ d[0] +  ".png'width='130' height='130' alt='...' class='img-fluid rounded-circle' style='display:inline-block;'>" +
+                       " <div style='display:inline-block;align:right;width:390px; '><p style='text-align:right;'>Name：" + name[0]
+                       +  "</p> <p style='text-align:right;'>Story：" +  story
+                       +  "</p> </div><br>"
+                   )
+               }
+           });
+      $('input[type=radio][name=Role]').change(function() {
+           $.ajax({
+               url: "/Test",
+               type: "POST",
+               data: {data: this.value},
+               success: function(data) {
+                   //alert(data);
+                   var sort_by = data.sort_by;
+                   // str = [ win,appear,role,kills,killed,heal,damage,damaged ,assist]
+                   var d = data.cids;
+                   var a = data.a;
+                   var name = data.name;
+                   var win = data.win;
+                   var kills = data.kills;
+                   var killed = data.killed;
+                   var heal = data.heal;
+                   var damage = data.damage;
+                   var damaged = data.damaged;
+                   var assist = data.assist;
+                   var  r = data.r;
+                   var n = 0;
+                   var sort_data;
+                   var story = data.stroy
+                   if(sort_by=="win"){
+                       sort_data = win;
+                   }
+                   else if(sort_by=="appear"){
+                       sort_data = a;
+                   }
+                   else if(sort_by=="kills"){
+                       sort_data = kills;
+                   }
+                   else if(sort_by=="killed"){
+                       sort_data = killed;
+                   }
+                   else if(sort_by=="heal"){
+                       sort_data = heal;
+                   }
+                   else if(sort_by=="damage"){
+                       sort_data = damage;
+                   }
+                   else if(sort_by=="damaged"){
+                       sort_data = damaged;
+                   }
+                   else if(sort_by=="assist"){
+                       sort_data = assist;
+                   }
+                   $("#select").empty();$("#t1").empty();$("#s1").empty();
+                   $("#select").append(sort_by.toUpperCase())
+                   for (i = 0; i< d.length; i++){
+                       n = i+1;
+                       $("#t1").append(
+                         "<tr> <th scope='row'>"+ n +"</th> " +
+                           "<th><img src='../../../static/img/champImg/"+ d[i] + ".png' width='45' height='45' alt='...' class='img-fluid rounded-circle'>&nbsp&nbsp" + name[i]  + "</th> " +
+                           "<td>" + sort_data[i]  + "</td>" +
+                           "<td>" +  r[i] + "</td> </tr>"
+                        )
+                   }
+                   $("#s1").append(
+                     "<img src='../../../static/img/champImg/"+ d[0] +  ".png'width='130' height='130' alt='...' class='img-fluid rounded-circle' style='display:inline-block;'>" +
+                       " <div style='display:inline-block;align:right;width:390px; '><p style='text-align:right;'>Name：" + name[0]
+                       +  "</p> <p style='text-align:right;'>Story：" +  story
+                       +  "</p> </div>"
+                   )
+               }
+           });
+      });
+
+
+ });
+
+    </script>
+
+  </body>
+</html>
+
+
